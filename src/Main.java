@@ -1,4 +1,7 @@
 import sort.Merge;
+import sort.SortAssit;
+
+import java.util.ArrayList;
 
 /**
  * Created by smallcatcat on 2018/10/16.
@@ -15,13 +18,13 @@ public class Main {
         System.out.println("归并算法执行");
 
         System.out.print("排序前：");
-        Merge.show(randomArray);
+        SortAssit.show(randomArray);
 
         Merge.sort(randomArray);
 
-        System.out.println("是否已排序：" + Merge.isSorted(randomArray));
+        System.out.println("是否已排序：" + SortAssit.isSorted(randomArray));
 
         System.out.print("排序后：");
-        Merge.show(randomArray);
+        SortAssit.show(randomArray);
     }
 }
