@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by smallcatcat on 2018/10/16.
  */
@@ -16,4 +19,5 @@ public class Random {
 
         return arr;
     }
+
 }
