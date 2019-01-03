@@ -17,8 +17,10 @@ public class Merge extends MergeBase {
         if (high <= low) return;
 
         int mid = low + (high - low)/2;
+        // 先拆分成小数组
         sort(a, low, mid);
         sort(a, mid + 1, high);
+        // 拆分完小数组后，从小数组开始进行merge操作，return后合并，再进行上层的merge操作
         merge(a, low, mid, high);
     }
 }
