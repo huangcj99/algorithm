@@ -1,10 +1,9 @@
-import sort.SortAssit;
-import sort.merge.Merge;
-import sort.merge.MergeBU;
-
 /**
  * Created by smallcatcat on 2018/10/16.
  */
+import sort.SortAssit;
+import sort.quick.Quick3way;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("start...");
@@ -39,5 +38,14 @@ public class Main {
 //
 //        System.out.print("排序后：");
 //        SortAssit.show(randomArray);
+
+        // 三向切分快速排序
+        System.out.print("排序前：");
+        SortAssit.show(randomArray);
+
+        Quick3way.sort(randomArray);
+
+        System.out.print("排序后：");
+        SortAssit.show(randomArray);
     }
 }
