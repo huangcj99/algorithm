@@ -11,10 +11,6 @@ public class SortAssit {
 
 //    交换
     public static void exch(Comparable[] a, int i, int j) {
-//        System.out.print("===");
-//        System.out.println(i);
-//        System.out.println(j);
-
         Comparable t = a[i];
         a[i] = a[j];
         a[j] = t;
