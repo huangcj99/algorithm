@@ -4,6 +4,7 @@
 import sort.merge.MergeBUTest;
 import sort.merge.MergeTest;
 import sort.quick.Quick3WayTest;
+import tree.bst_tree.BSTTest;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class Main {
         // MergeBUTest.start();
 
 //        二叉树相关
-
+        BSTTest.start();
 
     }
 }
