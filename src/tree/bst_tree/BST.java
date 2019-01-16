@@ -253,4 +253,59 @@ public class BST<Key extends Comparable<Key>, Value> {
 
         return node;
     }
+
+    // 删除指定节点
+    public void delete(Key key) {
+        delete(root, key);
+    }
+
+    private Node delete(Node node, Key key) {
+        if (node == null) {
+            return null;
+        }
+
+        int cmp = key.compareTo(node.key);
+
+        if (cmp > 0) {
+            // 继续往右子节点递归，并且回溯的时候设置该节点的节点数数量
+            node.right = delete(node.right, key);
+        } else if (cmp < 0) {
+            // 继续往左子节点递归，并且回溯的时候设置该节点的节点数数量
+            node.left = delete(node.left, key);
+        } else {
+            if (node.right == null) {
+                return node.left;
+            }
+            if (node.left == null) {
+                return node.right;
+            }
+
+            // 删除右子树的最小节点，获取后将右子树最小节点替换为当前节点，然后返回
+            Node rightMin = deleteMin(node.right);
+
+            // 右子树最小节点的左右子树分别替换为被删除节点的左右子树
+            rightMin.left = node.left;
+            rightMin.right = node.right;
+
+            return rightMin;
+        }
+
+        // 回溯的时候重置节点树数量
+        node.N = size(node.left) + size(node.right) + 1;
+
+        return node;
+    }
+
+    // 中序遍历打印节点
+    public void print() {
+        print(root);
+    }
+
+    private void print(Node node) {
+        if (node == null) return;
+
+        print(node.left);
+        System.out.println(node.key);
+        print(node.right);
+    }
 }
