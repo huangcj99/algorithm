@@ -296,16 +296,42 @@ public class BST<Key extends Comparable<Key>, Value> {
         return node;
     }
 
-    // 中序遍历打印节点
-    public void print() {
-        print(root);
+    // 前序遍历打印
+    public void preOtherPrint() {
+        preOtherPrint(root);
     }
 
-    private void print(Node node) {
+    private void preOtherPrint(Node node) {
         if (node == null) return;
 
-        print(node.left);
         System.out.println(node.key);
-        print(node.right);
+        preOtherPrint(node.left);
+        preOtherPrint(node.right);
+    }
+
+    // 中序遍历打印
+    public void inOtherPrint() {
+        inOtherPrint(root);
+    }
+
+    private void inOtherPrint(Node node) {
+        if (node == null) return;
+
+        inOtherPrint(node.left);
+        System.out.println(node.key);
+        inOtherPrint(node.right);
+    }
+
+    // 后序遍历打印
+    public void postOtherPrint() {
+        postOtherPrint(root);
+    }
+
+    private void postOtherPrint(Node node) {
+        if (node == null) return;
+
+        postOtherPrint(node.left);
+        postOtherPrint(node.right);
+        System.out.println(node.key);
     }
 }

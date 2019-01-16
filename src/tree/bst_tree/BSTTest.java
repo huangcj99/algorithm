@@ -35,6 +35,6 @@ public class BSTTest {
 //        System.out.println(bstTree.rank("z"));
 //        System.out.println(bstTree.get("z"));
 //        中序遍历
-        bstTree.print();
+        bstTree.postOtherPrint();
     }
 }
