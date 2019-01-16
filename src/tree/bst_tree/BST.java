@@ -26,12 +26,12 @@ public class BST<Key extends Comparable<Key>, Value> {
         return size(root);
     }
 
-    private int size(Node root) {
-        if (root == null) {
+    private int size(Node node) {
+        if (node == null) {
             return 0;
         }
 
-        return root.N;
+        return node.N;
     }
 
     // 插入节点
@@ -84,6 +84,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    // 查找二叉树最小的key
     public Key min() {
         return min(root).key;
     }
@@ -96,6 +97,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    // 查找二叉树最大的key
     public Key max() {
         return max(root).key;
     }
@@ -174,5 +176,81 @@ public class BST<Key extends Comparable<Key>, Value> {
         } else {
             return node;
         }
+    }
+
+    // 查找位于num位置的节点
+    public Key select(int num) {
+        return select(root, num).key;
+    }
+
+    private Node select(Node node, int num) {
+        if (node == null) {
+            return null;
+        }
+
+        int leftSize = size(node.left);
+
+        if (num > leftSize) {
+            return select(node.right, num - leftSize - 1);
+        } else if (num < leftSize) {
+            return select(node.left, num);
+        } else {
+            return node;
+        }
+    }
+
+    // 查找key的排名
+    public int rank(Key key) {
+        return rank(key, root);
+    }
+
+    public int rank(Key key, Node node) {
+        if (node == null) {
+            return 0;
+        }
+
+        int cmp = key.compareTo(node.key);
+
+        if (cmp > 0) {
+            return  1 + size(node.left) + rank(key, node.right);
+        } else if (cmp < 0) {
+            return rank(key, node.left);
+        } else {
+            return size(node.left);
+        }
+    }
+
+    // 删除key最小的节点
+    public void deleteMin() {
+        root = deleteMin(root);
+    }
+
+    private Node deleteMin(Node node) {
+        if (node.left == null) {
+            return node.right;
+        }
+
+        // 一般返回的节点为左节点，找到最小节点则返回右节点
+        node.left = deleteMin(node.left);
+        node.N = size(node.left) + size(node.right) + 1;
+
+        return node;
+    }
+
+    // 删除key最大的节点
+    public void deleteMax() {
+        root = deleteMax(root);
+    }
+
+    private Node deleteMax(Node node) {
+        if (node.right == null) {
+            return node.left;
+        }
+
+        // 一般返回的节点为左节点，找到最小节点则返回右节点
+        node.right = deleteMax(node.right);
+        node.N = size(node.left) + size(node.right) + 1;
+
+        return node;
     }
 }
