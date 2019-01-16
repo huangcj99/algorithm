@@ -17,10 +17,13 @@ public class BSTTest {
         bstTree.put("c", 8);
         bstTree.put("h", 8);
         bstTree.put("m", 8);
-        System.out.println(bstTree.size());
-        System.out.println(bstTree.get("h"));
-        System.out.println(bstTree.min());
-        System.out.println(bstTree.max());
-        System.out.println(bstTree.ceiling("g"));
+//        System.out.println(bstTree.size());
+//        System.out.println(bstTree.get("h"));
+//        System.out.println(bstTree.min());
+//        System.out.println(bstTree.max());
+//        System.out.println(bstTree.ceiling("g"));
+//        System.out.println(bstTree.rank("a"));
+        bstTree.deleteMin();
+        bstTree.deleteMax();
     }
 }
