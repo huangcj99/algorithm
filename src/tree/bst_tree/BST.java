@@ -1,5 +1,7 @@
 package tree.bst_tree;
 
+import java.util.Iterator;
+
 /**
  * Created by smallcatcat on 2019/1/14.
  */
@@ -304,7 +306,7 @@ public class BST<Key extends Comparable<Key>, Value> {
     private void preOtherPrint(Node node) {
         if (node == null) return;
 
-        System.out.println(node.key);
+        System.out.print(node.key);
         preOtherPrint(node.left);
         preOtherPrint(node.right);
     }
@@ -318,7 +320,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         if (node == null) return;
 
         inOtherPrint(node.left);
-        System.out.println(node.key);
+        System.out.print(node.key);
         inOtherPrint(node.right);
     }
 
@@ -332,6 +334,42 @@ public class BST<Key extends Comparable<Key>, Value> {
 
         postOtherPrint(node.left);
         postOtherPrint(node.right);
-        System.out.println(node.key);
+        System.out.print(node.key);
+    }
+
+    public Iterable<Key> keys() {
+        return keys(min(), max());
+    }
+
+    public Iterable<Key> keys(Key low, Key high) {
+        Queue<Key> queue = new Queue<Key>();
+
+        keys(root, queue, low, high);
+
+        return queue;
+    }
+
+    private void keys(Node node, Queue<Key> queue, Key low, Key high) {
+        if (node == null) {
+            return;
+        }
+
+        int cmplow = low.compareTo(node.key);
+        int cmphigh = high.compareTo(node.key);
+
+        // 当前节点大于最小边界，则一直往左递归知道找到空节点后回溯
+        if (cmplow < 0) {
+            keys(node.left, queue, low, high);
+        }
+
+        // 回溯过程中，判断当前节点如果在low到high之间则将其添加到队列当中
+        if (cmplow <= 0 && cmphigh >= 0) {
+            queue.enqueue(node.key);
+        }
+
+        // 当前节点小于最大边界，往右子树递归直到空节点后回溯
+        if (cmphigh > 0) {
+            keys(node.right, queue, low, high);
+        }
     }
 }
