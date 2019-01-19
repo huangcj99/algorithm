@@ -1,5 +1,7 @@
 package tree.bst_tree;
 
+import java.util.Iterator;
+
 /**
  * Created by smallcatcat on 2019/1/14.
  */
@@ -28,13 +30,23 @@ public class BSTTest {
 //        System.out.println(bstTree.rank("a"));
 //        bstTree.deleteMin();
 //        bstTree.deleteMax();
+
 //        删除节点测试
 //        System.out.println(bstTree.rank("x"));
 //        System.out.println(bstTree.rank("z"));
 //        bstTree.delete("x");
 //        System.out.println(bstTree.rank("z"));
 //        System.out.println(bstTree.get("z"));
+
 //        中序遍历
-        bstTree.postOtherPrint();
+//        bstTree.postOtherPrint();
+
+        // 测试keys方法以及Queue类
+        Queue queue = (Queue) bstTree.keys("c", "s");
+
+        queue.print();
+        for (Object s : queue) {
+            System.out.print(s);
+        }
     }
 }
