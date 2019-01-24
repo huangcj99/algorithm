@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c0d87e8-0d56-4f99-bdba-2a0588b26414" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sort/SortAssit.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/algorithm/tree/bst_tree/BST$Node.class" afterPath="$PROJECT_DIR$/out/production/algorithm/tree/bst_tree/BST$Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/algorithm/tree/bst_tree/BST.class" afterPath="$PROJECT_DIR$/out/production/algorithm/tree/bst_tree/BST.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/algorithm/tree/bst_tree/BSTTest.class" afterPath="$PROJECT_DIR$/out/production/algorithm/tree/bst_tree/BSTTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tree/bst_tree/BST.java" afterPath="$PROJECT_DIR$/src/tree/bst_tree/BST.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tree/bst_tree/BSTTest.java" afterPath="$PROJECT_DIR$/src/tree/bst_tree/BSTTest.java" />
-    </list>
+    <list default="true" id="0c0d87e8-0d56-4f99-bdba-2a0588b26414" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,12 +73,11 @@
           <file leaf-file-name="Queue.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tree/bst_tree/Queue.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="291">
-                  <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+                <state relative-caret-position="409">
+                  <caret line="77" column="34" lean-forward="true" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
                   <folding>
                     <element signature="e#1045#1046#0" expanded="true" />
                     <element signature="e#1073#1074#0" expanded="true" />
-                    <element signature="e#1640#1641#0" expanded="true" />
                     <element signature="e#1684#1685#0" expanded="true" />
                   </folding>
                 </state>
@@ -178,7 +169,7 @@
           <file leaf-file-name="BSTTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tree/bst_tree/BSTTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="520">
+                <state relative-caret-position="739">
                   <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
                   <folding />
                 </state>
@@ -871,7 +862,7 @@
       <workItem from="1547602718480" duration="4931000" />
       <workItem from="1547611568101" duration="3477000" />
       <workItem from="1547693248468" duration="7975000" />
-      <workItem from="1547711102205" duration="2462000" />
+      <workItem from="1547711102205" duration="2777000" />
     </task>
     <task id="LOCAL-00001" summary="add README">
       <created>1539682207145</created>
@@ -884,7 +875,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63504000" />
+    <option name="totallyTimeSpent" value="63819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1920" height="1080" extended-state="0" />
@@ -899,7 +890,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.221665" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.221665" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1332,12 +1323,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tree/bst_tree/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+        <state relative-caret-position="409">
+          <caret line="77" column="34" lean-forward="true" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
           <folding>
             <element signature="e#1045#1046#0" expanded="true" />
             <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
             <element signature="e#1684#1685#0" expanded="true" />
           </folding>
         </state>
