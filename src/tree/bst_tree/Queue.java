@@ -10,7 +10,7 @@ public class Queue<Item> implements Iterable<Item> {
     private QueueNode first = null;
     private int queueLen = 0;
 
-    private class QueueNode<Item> {
+    private class QueueNode {
         private Item val;
         private QueueNode next;
 
@@ -19,7 +19,7 @@ public class Queue<Item> implements Iterable<Item> {
             this.next = null;
         }
 
-        public QueueNode<Item> getNext() {
+        public QueueNode getNext() {
             return this.next;
         }
 
@@ -30,6 +30,10 @@ public class Queue<Item> implements Iterable<Item> {
         public Item getVal() {
             return this.val;
         }
+    }
+
+    public boolean empty() {
+        return queueLen == 0;
     }
 
     // 添加项
@@ -49,6 +53,15 @@ public class Queue<Item> implements Iterable<Item> {
         queueLen++;
     }
 
+    public Item dequeue() {
+        Item shiftNode = first.getVal();
+
+        first = first.getNext();
+        queueLen = queueLen == 0 ? 0 : queueLen - 1;
+
+        return shiftNode;
+    }
+
     public void print() {
         print(first);
     }
@@ -61,7 +74,7 @@ public class Queue<Item> implements Iterable<Item> {
         }
     }
 
-    private QueueNode<Item> findLast(QueueNode queueNode) {
+    private QueueNode findLast(QueueNode queueNode) {
         if (queueNode.next == null) {
             return queueNode;
         } else {
@@ -81,7 +94,7 @@ public class Queue<Item> implements Iterable<Item> {
 
         @Override
         public Item next() {
-            Item item = (Item) node.getVal();
+            Item item = node.getVal();
 
             node = node.getNext();
             i++;

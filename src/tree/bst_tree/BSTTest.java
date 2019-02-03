@@ -19,8 +19,8 @@ public class BSTTest {
         bstTree.put("r", 8);
         bstTree.put("c", 999);
         bstTree.put("h", 8);
-        bstTree.put("m", 8);
-        bstTree.put("z", 555);
+//        bstTree.put("m", 8);
+//        bstTree.put("z", 555);
 
 //        System.out.println(bstTree.size());
 //        System.out.println(bstTree.get("h"));
@@ -42,11 +42,17 @@ public class BSTTest {
 //        bstTree.postOtherPrint();
 
         // 测试keys方法以及Queue类
-        Queue queue = (Queue) bstTree.keys("c", "s");
+//        Queue queue = (Queue) bstTree.keys("c", "s");
+//
+//        queue.print();
+//        for (Object s : queue) {
+//            System.out.print(s);
+//        }
 
-        queue.print();
-        for (Object s : queue) {
-            System.out.print(s);
-        }
+//        广度优先遍历
+//        bstTree.bfsPrint();
+
+        // 深度优先遍历
+        bstTree.dfsPrint();
     }
 }
