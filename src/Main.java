@@ -20,7 +20,7 @@ public class Main {
         // MergeBUTest.start();
 
 //        二叉树相关
-        BSTTest.start();
+//        BSTTest.start();
 
     }
 }

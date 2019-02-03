@@ -1,6 +1,7 @@
 package tree.bst_tree;
 
 import java.util.Iterator;
+import java.util.Stack;
 
 /**
  * Created by smallcatcat on 2019/1/14.
@@ -370,6 +371,51 @@ public class BST<Key extends Comparable<Key>, Value> {
         // 当前节点小于最大边界，往右子树递归直到空节点后回溯
         if (cmphigh > 0) {
             keys(node.right, queue, low, high);
+        }
+    }
+
+    // 广度优先遍历
+    public void bfsPrint() {
+        Queue<Node> nodeQueue = new Queue<>();
+
+        // 初始化队列
+        nodeQueue.enqueue(root);
+
+        while (!nodeQueue.empty()) {
+            // 出队列
+            Node node = nodeQueue.dequeue();
+
+            System.out.println(node.key);
+
+            // 入队列
+            if (node.left != null) {
+                nodeQueue.enqueue(node.left);
+            }
+
+            if (node.right != null) {
+                nodeQueue.enqueue(node.right);
+            }
+        }
+    }
+
+    // 深度优先遍历
+    public void dfsPrint() {
+        Stack<Node> nodeStack = new Stack<>();
+
+        nodeStack.push(root);
+
+        while (!nodeStack.empty()) {
+            Node node = nodeStack.pop();
+
+            System.out.println(node.key);
+
+            if (node.right != null) {
+                nodeStack.push(node.right);
+            }
+
+            if (node.left != null) {
+                nodeStack.push(node.left);
+            }
         }
     }
 }
